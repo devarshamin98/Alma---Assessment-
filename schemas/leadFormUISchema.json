@@ -23,6 +23,11 @@
     },
     {
       "type": "Control",
+      "scope": "#/properties/countryOfCitizenship",
+      "label": "Country Of Citizenship"
+    },
+    {
+      "type": "Control",
       "scope": "#/properties/visas",
       "label": "Visa Categories",
       "options": {

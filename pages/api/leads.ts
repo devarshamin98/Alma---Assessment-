@@ -43,13 +43,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } else if (req.method === 'GET') {
     return res.status(200).json(leads);
   } else if (req.method === 'PUT') {
-    const { id, state } = req.body;
-    const lead = leads.find((l) => l.id === id);
-    if (lead) {
-      lead.state = state;
-      return res.status(200).json({ success: true });
-    }
-    return res.status(404).json({ error: 'Lead not found' });
+    let body = '';
+    req.on('data', chunk => {
+      body += chunk.toString();
+    });
+
+    req.on('end', () => {
+      const { id, state } = JSON.parse(body);
+      const lead = leads.find((l) => l.id === id);
+      console.log('lead', lead)
+      if(lead) {
+        lead.state = state;
+        console.log('lead', lead)
+        return res.status(200).json({ success: true });
+      }
+      return res.status(404).json({error: 'Lead not found'});
+    });
   }
   
 }

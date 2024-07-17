@@ -23,6 +23,15 @@ const LeadsList = () => {
     fetchLeads();
   }, []);
 
+const handleStatusChange = async (id) => {
+  const response = await fetch('api/leads', {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ state: 'REACHED_OUT', id: id })
+  });
+  return response.json();
+}
+
   return (
     <div className={styles.container}>
       <h1>Leads</h1>
