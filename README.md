@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+**DesignDocument.md**
+```markdown
+# Design Document
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This document outlines the design choices made for the Leads App.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Technologies Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js**: For server-side rendering and routing.
+- **TypeScript**: For type safety and better development experience.
+- **Redux**: For state management.
+- **JsonForms**: For dynamic form rendering.
+- **Material-UI**: For UI components and styling.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Components
 
-## Learn More
+- **LeadForm**: A form for submitting leads.
+- **LeadList**: A list view for displaying leads, with the ability to change the lead status.
 
-To learn more about Next.js, take a look at the following resources:
+### API
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Leads API**: A mock API for handling lead data.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Authentication
 
-## Deploy on Vercel
+- **Mock Authentication**: A simple login mechanism to protect the internal leads list page.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Styling
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **CSS Modules**: For scoped styling of components.
+
+### Unit Tests
+
+- **Testing Library**: For writing unit tests for components and Redux state management.
+
+## Conclusion
+
+This design aims to provide a scalable and maintainable structure for the Leads App, leveraging modern technologies and best practices.
+
+# Lead Form Application
+
+## Running Locally
+
+   1. git clone REPO_URL
+   2. cd leads-app
+   3. npm install (To install dependencies)
+   4. npm run 
+
+## URL Summary
+Home Page: http://localhost:3000
+Internal Lead List Page: http://localhost:3000/leads
