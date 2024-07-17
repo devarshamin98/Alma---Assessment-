@@ -1,0 +1,73 @@
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+  }
+  
+  .loginButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .loginButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .leadListContainer {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  h1#LeadList {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .leadTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .leadTable th, .leadTable td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .leadTable th {
+    background-color: #f3f3f3;
+    font-weight: bold;
+  }
+  
+  .leadTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .leadTable tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  
+  .leadTable button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .leadTable button:hover {
+    background-color: #0056b3;
+  }
+  

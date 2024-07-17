@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "properties": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "visas": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["O1", "EB1A", "EB2-NIW"]
+      },
+      "uniqueItems": true
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "required": ["firstName", "lastName", "email", "linkedin", "visas", "message"]
+}
